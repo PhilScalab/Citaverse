@@ -22,7 +22,7 @@ def accueil():
     st.title("Citaverse: Plateforme d'Engagement Citoyen")
     col1, col2 = st.beta_columns(2)
 
-    col1.image("Logo/_12bcb1a9-7d43-417f-9cf4-9a6b5c0ffdee.jpeg",
+    col1.image("https://github.com/PhilScalab/Citaverse/blob/main/_12bcb1a9-7d43-417f-9cf4-9a6b5c0ffdee.jpeg",
                caption="Image de présentation", use_column_width=True, output_format='JPEG')
 
     col2.subheader("À propos de l'outil")
