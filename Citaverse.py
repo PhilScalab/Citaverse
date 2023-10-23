@@ -12,7 +12,7 @@ st.set_page_config(
 
 # Créer un menu latéral avec différentes pages
 menu = ["Accueil", "Prédiction des Surverses",
-        "Engagement Citoyen", "Visualisation", "À Propos"]
+        "Engagement Citoyen", "Visualisation", "À Propos", "Découvrir"]
 choix = st.sidebar.selectbox("Choisir une page", menu)
 
 # Créer des fonctions pour chaque page
