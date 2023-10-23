@@ -142,7 +142,7 @@ def a_propos():
 
 
 import streamlit as st
-import pydeck as pdk
+import pandas as pd
 
 # Sample coordinates near Tadoussac
 ANIMAL_LOCATIONS = {
@@ -158,44 +158,18 @@ ANIMAL_DESCRIPTIONS = {
 }
 
 def display_animal_map():
-    map_data = [{
-        "animal": animal,
-        "latitude": loc[0],
-        "longitude": loc[1],
-        "description": ANIMAL_DESCRIPTIONS[animal]
-    } for animal, loc in ANIMAL_LOCATIONS.items()]
-
-    view_state = pdk.ViewState(
-        latitude=48.1460,
-        longitude=-69.7242,
-        zoom=10,
-        pitch=40.5,
-        bearing=-27.36
-    )
-
-    layer = pdk.Layer(
-        type="ScatterplotLayer",
-        data=map_data,
-        get_position="[longitude, latitude]",
-        get_radius=200,
-        get_fill_color="[255, 140, 0]",
-        pickable=True
-    )
-
-    r = pdk.Deck(
-        map_style="mapbox://styles/mapbox/light-v9",
-        initial_view_state=view_state,
-        layers=[layer]
-    )
+    # Convert animal locations to a DataFrame for st.map
+    df = pd.DataFrame({
+        'animal': list(ANIMAL_LOCATIONS.keys()),
+        'lat': [loc[0] for loc in ANIMAL_LOCATIONS.values()],
+        'lon': [loc[1] for loc in ANIMAL_LOCATIONS.values()]
+    })
     
-    st.pydeck_chart(r)
+    st.map(df)
 
-    # Check if a point was clicked
-    if st.session_state.get("clicked", None):
-        clicked_data = st.session_state.clicked
-        st.write(ANIMAL_DESCRIPTIONS.get(clicked_data["object"]["animal"], ""))
-    
-
+    # Using a radio button for the user to select which point they clicked
+    clicked_animal = st.radio("Which animal did you click on?", list(ANIMAL_LOCATIONS.keys()))
+    st.write(ANIMAL_DESCRIPTIONS[clicked_animal])
 
 
 # Associer chaque fonction à son menu correspondant
