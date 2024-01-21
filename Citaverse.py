@@ -187,10 +187,52 @@ def education():
     [Montreal Gazette Article](https://montrealgazette.com/news/local-news/visit-to-montreals-largest-underground-water-retention-basin?fbclid=IwAR2JGorZzMwBqsfQncpT83GuVp8zKQ0_48-TZbAKttnJNBhZ_Si9nLJ_er4)
     """)
 
-    # References and Additional Resources
-    st.subheader("🔗 References and Additional Resources")
+    st.title("📚 Références et articles / 🔗 References and Articles")
+
+    # Biodiversity and Ecosystem
+    st.subheader("🌳 Biodiversity and Ecosystem")
     st.write("""
-    Check out these links for more detailed information and additional resources on Montreal's wastewater treatment and related environmental issues.
+    - [Biodiversity of Birds - ECCC](https://ogsl.ca/en/biodiversity-birds-eccc-biomq-species/)
+    - [Save The River - Ecosystem Information](https://www.savetheriver.org/river-info/ecosystem/)
+    - [Rare Animals, Plants, and Trees in Montreal Parks](https://montreal.ca/en/articles/12-rare-animals-plants-and-trees-to-discover-our-parks-29850)
+    - [Fondation Rivieres](https://fondationrivieres.org/)
+    - [CannForecast - Overflow](https://www.cannforecast.com/en/overflow/)
+    - [Canadian Environmental Protection Act - Wastewater Regulations](https://laws-lois.justice.gc.ca/eng/regulations/sor-2012-139/fulltext.html)
+    - [Endangered Species in Montreal - The Link Newspaper](https://thelinknewspaper.ca/article/a-look-at-endangered-species-in-montreal)
+    """)
+
+    # Water Saving Habits
+    st.subheader("💧 Water Saving Habits")
+    st.write("""
+    - [David Suzuki Foundation - Water Conservation Tips](https://davidsuzuki.org/living-green/make-every-drop-count-water-conservation-tips/?gad_source=1&gclid=CjwKCAiAjrarBhAWEiwA2qWdCHcCO8yqba8Pf2xZWIPTVhAFMK9S3-97ERQS7qQ8hAFwTsB809ztDRoCVBYQAvD_BwE)
+    - [Connecticut Government - Water Conservation Tips](https://portal.ct.gov/DEEP/Water/Water-Quantity/Tips-for-Conserving-Water)
+    - [British Columbia Government - Water Conservation Tips](https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/drought-flooding-dikes-dams/drought-information/water-conservation-tips)
+    - [Newfoundland and Labrador Government - Water Conservation](https://www.gov.nl.ca/ecc/waterres/waste/water-conservation/)
+    """)
+
+    # Interactive Maps and Guides
+    st.subheader("🗺️ Interactive Maps and Guides")
+    st.write("""
+    - [Aquatic Species at Risk - Interactive Map](https://www.dfo-mpo.gc.ca/species-especes/sara-lep/map-carte/index-eng.html)
+    - [Montreal’s Wastewater Treatment Updates](https://montreal.ca/en/articles/ozone-disinfection-construction-jean-r-marcotte-water-treatment-station-27451)
+    - [Montreal Wastewater Treatment Plant - CBC News](https://www.cbc.ca/news/canada/montreal/montreal-wastewater-treatment-plant-1.6711208)
+    - [Environmental Science and Engineering Magazine](https://esemag.com/wastewater/montreal-incinerator-ozonation-upgrades-wwtp/)
+    - [Bioretention in Montreal - CBC News](https://www.cbc.ca/news/canada/montreal/bioretention-montreal-water-1.6826358)
+    - [Water Infrastructure Management - CBC News](https://www.cbc.ca/news/canada/montreal/water-infrastructure-management-1.6936541)
+    - [Montreal's Underground Water Retention Basin - Montreal Gazette](https://montrealgazette.com/news/local-news/visit-to-montreals-largest-underground-water-retention-basin?fbclid=IwAR1c42yoe6Dks31ie9clqAbJLSd84ohfUxnM1O_awfrEFKXZ2XjcfVRc-Hc)
+    """)
+
+    # Additional Resources
+    st.subheader("🔗 Additional Resources")
+    st.write("""
+    - [Montreal's Water Treatment Process](https://montreal.ca/en/articles/visit-to-water-treatment-plant-cutting-edge-technology-38855?wufoo=true#public)
+    - [Quebec's 2018-2030 Water Strategy](https://www.environnement.gouv.qc.ca/eau/strategie-quebecoise/strategie2018-2030-en.pdf)
+    - [Regulations for Municipal Wastewater Treatment Works](https://www.legisquebec.gouv.qc.ca/en/document/cr/q-2,%20r.%2034.1)
+    - [Interactive Map on Water Quality in Montreal](https://fondationrivieres.org/notre-expertise/boite-a-outils/carte-potentiel-de-baignade-montreal/)
+    - [Swim Drink Fish - Charity for Water Quality](https://www.swimdrinkfish.ca/)
+    - [Montreal Rare Species List](https://montreal.ca/en/articles/12-rare-animals-plants-and-trees-to-discover-our-parks-29850)
+    - [Water Rangers - Water Quality Testing](https://www.waterrangers.ca/)
+    - [Hydro Quebec’s Energy Saving Tips](https://www.hydroquebec.com/residential/energy-wise/register.html)
     """)
 
 
