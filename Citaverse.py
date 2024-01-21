@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # Créer un menu latéral avec différentes pages
-menu = ["Accueil", "Prédiction des Surverses",
+menu = ["Accueil", "Éducation","Prédiction des Surverses",
         "Engagement Citoyen", "Visualisation", "À Propos", "Découvrir"]
 choix = st.sidebar.selectbox("Choisir une page", menu)
 
@@ -52,6 +52,145 @@ def accueil():
     - **Prévisions météorologiques**:
         - Source: [Weatherstat basé sur les données d'Environnement et Changement climatique Canada and Climate Canada](https://www.weatherstats.ca/)
         - Licence: "Environnement et Changement climatique Canada ne garantit pas la qualité, l'exactitude ou l'exhaustivité des informations ou des données. Ces informations et données sont fournies "TELLES QUELLES" sans garantie ni condition de quelque nature que ce soit. L'utilisation de ces données est basée sur le "Limited Use Software and Data Product Licence Agreement" d'Environnement et Changement climatique Canada. Tout usage ultérieur est soumis à cette licence et nécessite une attribution appropriée : basée sur les données d'Environnement et Changement climatique Canada."
+    """)
+
+def education():
+    st.title("🌊 Comprendre le traitement des eaux usées à Montréal")
+
+    # Introduction
+    st.subheader("Comment les eaux usées de Montréal sont-elles traitées ?")
+    st.info("""
+    La plupart des Montréalais ignorent que Montréal possède la troisième plus grande usine de traitement des eaux usées au monde! L'usine Jean-R. Marcotte, construite en 1984 et située dans l'est de Montréal, traite presque la moitié des eaux usées du Québec. Cela représente entre 2,5 et 7,6 millions de mètres cubes d'eau traitée par jour.
+
+    En savoir plus dans cet article de la Fondation Rivière:
+    [Article de la Fondation Rivière](https://fondationrivieres.org/en/coulisses-station-depuration-eaux-usees-montreal-2/)
+    """)
+
+    # Mises à jour à venir
+    st.subheader("🆕 Mises à jour à venir dans le traitement des eaux usées")
+    st.warning("""
+    D'ici 2025, Montréal prévoit de moderniser son processus de traitement des eaux usées en ajoutant une étape appelée "ozonation". L'ozonation consiste à injecter de l'ozone dans l'eau pendant le processus de traitement. Cela aide à éliminer les virus, les bactéries et les produits pharmaceutiques nocifs.
+
+    Pour en savoir plus sur la mise à jour de la Ville de Montréal:
+    [Mise à jour de la Ville de Montréal](https://montreal.ca/en/articles/ozone-disinfection-construction-jean-r-marcotte-water-treatment-station-27451)
+    """)
+
+    # Débordement des effluents
+    st.subheader("💦 Comment cela conduit-il à un débordement des effluents ?")
+    st.write("""
+    Lorsque l'eau entrant dans le système dépasse sa capacité de traitement, l'excès d'eau est déversé dans la rivière Saint-Laurent. Cela se produit généralement lors de la fonte des neiges, de fortes pluies ou lors de travaux de construction.
+
+    Pour plus d'informations détaillées:
+    [Ressource Réseau Femmes Environnement](https://reseaufemmesenvironnement.org/blogue/overflow)
+    """)
+
+    # Impacts des débordements d'effluents
+    st.subheader("🌱 Impacts des débordements d'effluents")
+    st.write("""
+    **Sur la biodiversité :** Enrichissement en nutriments entraînant une croissance indésirable des algues et l'eutrophisation des masses d'eau. Perte de biodiversité dans le fleuve Saint-Laurent, y compris les impacts sur les espèces de crustacés d'eau douce.
+
+    **Pour les citoyens :** Risques accrus d'inondation, contamination de l'eau potable, interdiction d'activités récréatives et dégradation esthétique des espaces naturels.
+
+    **Sur l'économie :** Perte d'attractivité touristique et diminution de la valeur des propriétés le long du fleuve.
+
+    **Pour en savoir plus, consultez la Gestion Durable des eaux pluviales :**
+    [Ressource GDEP](https://robvq.qc.ca/gdep/)
+    """)
+
+    # Réduction de la consommation d'eau
+    st.subheader("💧 Que pouvons-nous faire pour réduire notre consommation d'eau et donc les débordements ?")
+    st.write("""
+    Réduire notre propre consommation d'eau a un impact considérable sur les débordements. En diminuant l'eau que nous utilisons dans nos foyers, nous réduisons l'eau qui en sort.
+
+    Conseils pour réduire la consommation d'eau de la Fondation David Suzuki :
+    [Conseils de la Fondation David Suzuki](https://fr.davidsuzuki.org/mode-de-vie/chaque-goutte-compte-conseils-pour-economiser-eau/)
+
+    Recommandations d'Hydro-Québec pour une utilisation efficace de l'eau chaude :
+    [Conseils d'Hydro-Québec](https://www.hydroquebec.com/residentiel/mieux-consommer/reduire-consommation-eau.html)
+    """)
+
+    # Actions de Montréal
+    st.subheader("🏙️ Que fait Montréal ?")
+    st.write("""
+    Montréal veille à la propreté des cours d'eau autour de la ville et construit de nouveaux bassins de rétention pour limiter les débordements.
+
+    Efforts de la Ville de Montréal :
+    [Eaux de Montréal](https://montreal.ca/en/topics/water-quality-waterways)
+
+    Article de la Montreal Gazette sur le bassin de rétention d'eau :
+    [Article de la Montreal Gazette](https://montrealgazette.com/news/local-news/visit-to-montreals-largest-underground-water-retention-basin?fbclid=IwAR2JGorZzMwBqsfQncpT83GuVp8zKQ0_48-TZbAKttnJNBhZ_Si9nLJ_er4)
+    """)
+    
+    st.title("🌊 Understanding Montreal’s Wastewater Treatment")
+
+    # Introduction
+    st.subheader("How is Montreal’s Wastewater handled?")
+    st.info("""
+    Most Montrealers don’t know that Montreal actually has the third largest wastewater treatment plant in the world! The Jean-R. Marcotte plant, built in 1984, and located in Eastern Montreal, treats almost half of Quebec’s wastewater. This represents between 2.5 and 7.6 million cubic meters of water treated per day.
+
+    Read more about the process in this article from the Fondation Rivière:
+    [Fondation Rivière Article](https://fondationrivieres.org/en/coulisses-station-depuration-eaux-usees-montreal-2/)
+    """)
+
+    # Upcoming Updates
+    st.subheader("🆕 Upcoming Updates in Wastewater Treatment")
+    st.warning("""
+    By 2025, Montreal is planning to update its wastewater treatment process by adding a step called “Ozonation”. Ozonation is the process of injecting ozone gas into the water during the treatment process. This helps to remove harmful viruses, bacteria, and pharmaceutical products.
+
+    Learn more from Ville de Montréal's update:
+    [Ville de Montréal Update](https://montreal.ca/en/articles/ozone-disinfection-construction-jean-r-marcotte-water-treatment-station-27451)
+    """)
+
+    # Effluent Overflow
+    st.subheader("💦 How does this lead to effluent overflow?")
+    st.write("""
+    At times when water entering the system exceeds its treatment capacity, the excess water is overflowed into the St. Lawrence River. This usually happens during snow melt, heavy rainfall, or construction.
+
+    For detailed insights:
+    [Reseau Femmes Environnement Resource](https://reseaufemmesenvironnement.org/blogue/overflow)
+    """)
+
+    # Impacts of Effluent Overflow
+    st.subheader("🌱 Impacts of Effluent Overflow")
+    st.write("""
+    **Biodiversity:** Nutrient enrichment leading to undesirable algal growth and eutrophication of water bodies. Loss of biodiversity in the St. Lawrence River, including impacts on freshwater crustacean species.
+
+    **For Citizens:** Increased risk of flooding, contamination of drinking water, prohibition of recreational activities, and aesthetic damage to natural areas.
+
+    **On the Economy:** Loss of tourist appeal and reduced property values along the river.
+
+    **Learn more from Gestion Durable des eaux pluviales:**
+    [GDEP Resource](https://robvq.qc.ca/gdep/)
+    """)
+
+    # Reducing Water Consumption
+    st.subheader("💧 What can we do to reduce our water consumption and thereby water overflow?")
+    st.write("""
+    Reducing our own water consumption greatly impacts water overflow. By reducing the water we take into our household, we reduce the water leaving our household.
+
+    Tips on reducing water usage from David Suzuki Foundation:
+    [David Suzuki Foundation Tips](https://davidsuzuki.org/living-green/make-every-drop-count-water-conservation-tips/?gad_source=1&gclid=CjwKCAiAjrarBhAWEiwA2qWdCHcCO8yqba8Pf2xZWIPTVhAFMK9S3-97ERQS7qQ8hAFwTsB809ztDRoCVBYQAvD_BwE)
+
+    Hydro Quebec's recommendation on using hot water efficiently:
+    [Hydro Quebec Tips](https://www.hydroquebec.com/residential/energy-wise/maximize-water-heater-use.html)
+    """)
+
+    # Montreal's Efforts
+    st.subheader("🏙️ What is Montreal doing?")
+    st.write("""
+    Montreal ensures the waterways around the city are clean and is building new water retention basins to limit overflows.
+
+    City of Montreal's efforts:
+    [City of Montreal Waterways](https://montreal.ca/en/topics/water-quality-waterways)
+
+    Montreal Gazette article on water retention basin:
+    [Montreal Gazette Article](https://montrealgazette.com/news/local-news/visit-to-montreals-largest-underground-water-retention-basin?fbclid=IwAR2JGorZzMwBqsfQncpT83GuVp8zKQ0_48-TZbAKttnJNBhZ_Si9nLJ_er4)
+    """)
+
+    # References and Additional Resources
+    st.subheader("🔗 References and Additional Resources")
+    st.write("""
+    Check out these links for more detailed information and additional resources on Montreal's wastewater treatment and related environmental issues.
     """)
 
 
@@ -179,6 +318,8 @@ def display_animal_map():
 # Associer chaque fonction à son menu correspondant
 if choix == "Accueil":
     accueil()
+elif choix == "Éducation":
+    education()
 elif choix == "Prédiction des Surverses":
     prediction()
 elif choix == "Engagement Citoyen":
