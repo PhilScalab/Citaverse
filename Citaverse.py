@@ -286,7 +286,7 @@ def prediction():
     # Create the heatmap layer
     heatmap_layer = pydeck.Layer(
         'HeatmapLayer',
-        data=df,
+        data=df['Result'],
         opacity=0.9,
         get_position='[Trop-Plein Lat, Trop-Plein Lon]',
         get_weight='Result',
