@@ -278,6 +278,7 @@ def prediction():
     df['Result'] = df.apply(lambda row: row['Coeff_Day_1'] * rain_day1 + 
                                             row['Coeff_Day_2'] * rain_day2 + 
                                             row['Coeff_Day_3'] * rain_day3, axis=1)*100
+    st.write(df['Result'])
 
     # Set up the map using Pydeck
     view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=10, bearing=0, pitch=0)
