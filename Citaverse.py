@@ -262,6 +262,10 @@ def prediction():
         'Trop-Plein Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
         'Trop-Plein Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
     }
+    # Convert to a DataFrame and ensure the numeric columns are of type float
+    data['Coeff_Day_1'] = data['Coeff_Day_1'].astype(float)
+    data['Coeff_Day_2'] = data['Coeff_Day_2'].astype(float)
+    data['Coeff_Day_3'] = data['Coeff_Day_3'].astype(float)
     
     st.write("""
     Ici, nous utiliserons des modèles pour prédire les surverses basées sur les précipitations.
