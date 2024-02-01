@@ -283,7 +283,6 @@ def prediction():
     # Display the results in a table
     st.write(df[['Site No','lat','lon','Resultat']])
     
-
     # Set up the map using Pydeck
     view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.6673, zoom=9, bearing=0, pitch=0)
 
@@ -313,7 +312,8 @@ def prediction():
     )
 
     st.pydeck_chart(r)
-    
+    st.warning('Ces résultats sont préliminaires et sujet à améliorations futures. Ils doivent être interprétés avec prudence et ne doivent pas servir de base pour des décisions définitives. Nous ne sommes pas responsables des dommages résultant de l'utilisation de ces informations. Des mises à jour seront apportées au fur et à mesure de l'avancement du projet.')
+
 
     
     #st.image("Logo/Pluie-reseau.jpeg",
