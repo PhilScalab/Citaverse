@@ -281,7 +281,7 @@ def prediction():
                                             row['Coeff_Day_2'] * rain_day2 + 
                                             row['Coeff_Day_3'] * rain_day3, axis=1)
     # Display the results in a table
-    st.write(df['Site No','lat','lon','Resultat'])
+    st.write(df[['Site No','lat','lon','Resultat']])
     
 
     # Set up the map using Pydeck
