@@ -288,7 +288,7 @@ def prediction():
         'HeatmapLayer',
         data=df,
         opacity=0.9,
-        get_position='[Trop-Plein Lon, Trop-Plein Lat]',
+        get_position='[Trop-Plein Lat, Trop-Plein Lon]',
         get_weight='Result',
         threshold=0.5,
         pickable=True
