@@ -282,6 +282,7 @@ def prediction():
                                             row['Coeff_Day_3'] * rain_day3, axis=1)
     # Display the results in a table
     st.write(df[['Site No','Resultat']])
+    st.write(df[['Lat','Long']])
 
     # Set up the map using Pydeck
     view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=9, bearing=0, pitch=0)
