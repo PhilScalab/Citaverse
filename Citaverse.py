@@ -255,17 +255,14 @@ def prediction():
     st.title("Prédiction des Surverses")
     # Hardcoded data
     data = {
-        'Coeff_Day_1': [0.00E+00, 4.94E-01, 8.07E-01, 0.00E+00, 0.00E+00],
-        'Coeff_Day_2': [0.00E+00, -6.11E-01, -3.21E-01, 0.00E+00, 0.00E+00],
-        'Coeff_Day_3': [0.00E+00, 4.72E-01, 3.87E-01, 0.00E+00, 0.00E+00],
+        'Coeff_Day_1': [0.00, 0.494, 0.807, 0.00, 0.00],
+        'Coeff_Day_2': [0.00, -0.0611, -0.321, 0.00, 0.00],
+        'Coeff_Day_3': [0.00, 0.472, 0.387, 0.00, 0.00],
         'Site No': ['0672-01D', '0672-02D', '0672-03D', '0801-01D', '0801-02D'],
         'Trop-Plein Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
         'Trop-Plein Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
     }
-    # Convert to a DataFrame and ensure the numeric columns are of type float
-    data['Coeff_Day_1'] = data['Coeff_Day_1'].astype(float)
-    data['Coeff_Day_2'] = data['Coeff_Day_2'].astype(float)
-    data['Coeff_Day_3'] = data['Coeff_Day_3'].astype(float)
+    
     
     st.write("""
     Ici, nous utiliserons des modèles pour prédire les surverses basées sur les précipitations.
