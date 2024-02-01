@@ -28,8 +28,8 @@ def accueil():
     htp="https://raw.githubusercontent.com/PhilScalab/Citaverse/_12bcb1a9-7d43-417f-9cf4-9a6b5c0ffdee.jpeg"
     #col1.image(htp, caption= 'Citaverse', width=350)
 
-    col1.subheader("Sources de données")
-    col1.warning("""
+    col2.subheader("Sources de données")
+    col2.warning("""
     - **Ouvrages de surverse - Débordements d'eaux usées**: 
         - Type: Données
         - Taille: 11 Mo
@@ -46,14 +46,14 @@ def accueil():
    # col1.image("",
               # caption="Image de présentation", use_column_width=True, output_format='JPEG')
 
-    col2.subheader("À propos de l'outil")
-    col2.success("""
+    col1.subheader("À propos de l'outil")
+    col1.success("""
     ### Bienvenue à Citaverse
     **Citaverse** est une plateforme innovante conçue pour sensibiliser et engager les citoyens à la problématique des surverses d'eaux usées. À travers une interface conviviale, notre outil offre une vue en temps réel des risques de surverse basée sur les prévisions météorologiques, et incite activement les citoyens à adopter une **consommation d'eau responsable** pendant les périodes critiques. Au-delà d'une simple plateforme d'information, Citaverse est un **appel à l'action** pour préserver nos ressources en eau et protéger notre environnement.
     Ce projet est né de la volonté d'un participant engagé dans le programme Ocean Bridge Canada 2023, un programme transformateur destiné aux jeunes Canadiens désireux de devenir des ambassadeurs des océans. Ocean Bridge vise à connecter et autonomiser la jeunesse à travers le pays pour adopter une culture de service en faveur de la conservation marine et des eaux douces. C'est dans cet esprit de sensibilisation et d'action que Citaverse a été conceptualisé, incarnant l'idéal d'une citoyenneté active et informée, prête à agir pour un futur durable.
     Au cœur de notre démarche se trouve une conviction forte : **chaque geste compte**. Et avec les bons outils et les bonnes informations, nous pouvons tous contribuer à faire la différence. Rejoignez-nous dans cette mission pour un avenir plus bleu et plus vert.
     """)
-    col2.info("""
+    col1.info("""
     _Les données fournies par le Partenariat Données Québec sont utilisées conformément à la licence Creative Commons Attribution 4.0 International. Les données météorologiques fournies par Environment and Climate Change Canada sont utilisées conformément au "Limited Use Software and Data Product Licence Agreement". Tout usage, distribution ou modification de ces données doit fournir une attribution appropriée._
     """)
 
