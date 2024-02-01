@@ -261,8 +261,8 @@ def prediction():
         'Coeff_Day_2': [0.10, -0.611, -0.321, 0.30, 0.30],
         'Coeff_Day_3': [0.10, 0.472, 0.387, 0.40, 0.20],
         'Site No': ['0672-01D', '0672-02D', '0672-03D', '0801-01D', '0801-02D'],
-        'Trop-Plein Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
-        'Trop-Plein Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
+        'Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
+        'Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
     }
     # Convert to a DataFrame
     df = pd.DataFrame(data)
@@ -291,7 +291,7 @@ def prediction():
         "HeatmapLayer",
         df,
         opacity=0.9,
-        get_position=["Trop-Plein lat", "Trop-Plein lon"],
+        get_position=["lon", "lat"],
         get_weight="Resultat",
         threshold=0.05,
         radiusPixels=50,
