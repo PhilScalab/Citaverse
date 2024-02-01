@@ -280,10 +280,10 @@ def prediction():
                                             row['Coeff_Day_3'] * rain_day3, axis=1)
 
     # Set up the map using Pydeck
-    view_state = pdk.ViewState(latitude=45.5017, longitude=-73.5673, zoom=11, bearing=0, pitch=0)
+    view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=11, bearing=0, pitch=0)
 
     # Create the heatmap layer
-    heatmap_layer = pdk.Layer(
+    heatmap_layer = pydeck.Layer(
         'HeatmapLayer',
         data=df,
         opacity=0.9,
@@ -294,7 +294,7 @@ def prediction():
     )
 
     # Render the map with the heatmap layer
-    r = pdk.Deck(
+    r = pydeck.Deck(
         layers=[heatmap_layer],
         initial_view_state=view_state
     )
