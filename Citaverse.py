@@ -281,12 +281,12 @@ def prediction():
                                             row['Coeff_Day_2'] * rain_day2 + 
                                             row['Coeff_Day_3'] * rain_day3, axis=1)
     # Display the results in a table
-    st.write(df[['Site No', 'Resultat']])
+    st.write(df[['lon','Lat','Site No', 'Resultat']])
 
     # Set up the map using Pydeck
     view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=9, bearing=0, pitch=0)
 
-    # Create the heatmap layer
+    # Création d'une carte avec pydeck
     heatmap_layer = pydeck.Layer(
         "HeatmapLayer",
         df,
@@ -303,13 +303,23 @@ def prediction():
         #get_weight='Result',
         #threshold=0.5,
         #pickable=True
+
     )
 
-    # Render the map with the heatmap layer
+    view_state = pydeck.ViewState(
+        latitude=46.8139, longitude=-71.2082, zoom=6, bearing=0, pitch=45
+    )
+
     r = pydeck.Deck(
         layers=[heatmap_layer],
-        initial_view_state=view_state
+        initial_view_state=view_state,
+        map_style="mapbox://styles/mapbox/light-v9",
     )
+
+    st.pydeck_chart(r)
+    
+    # Create the heatmap layer
+    
     st.pydeck_chart(r)
 
     
