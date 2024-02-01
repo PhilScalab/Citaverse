@@ -1,6 +1,7 @@
 # Importer les bibliothèques nécessaires
 import streamlit as st
 import pydeck
+import pandas as pd
 
 
 # Configurer la page
@@ -252,11 +253,53 @@ def education():
 
 def prediction():
     st.title("Prédiction des Surverses")
+    # Hardcoded data
+    data = {
+        'Coeff_Day_1': [0.00E+00, 4.94E-01, 8.07E-01, 0.00E+00, 0.00E+00],
+        'Coeff_Day_2': [0.00E+00, -6.11E-01, -3.21E-01, 0.00E+00, 0.00E+00],
+        'Coeff_Day_3': [0.00E+00, 4.72E-01, 3.87E-01, 0.00E+00, 0.00E+00],
+        'Site No': ['0672-01D', '0672-02D', '0672-03D', '0801-01D', '0801-02D'],
+        'Trop-Plein Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
+        'Trop-Plein Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
+    }
+    
     st.write("""
     Ici, nous utiliserons des modèles pour prédire les surverses basées sur les précipitations.
     """)
-    st.image("Logo/Pluie-reseau.jpeg",
-             caption="Prédiction selon les prévisions pluviométriques", use_column_width=True, output_format='JPEG')
+    
+    
+    # Sliders for precipitation input
+    rain_day1 = st.slider('Rainfall for Day 1 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
+    rain_day2 = st.slider('Rainfall for Day 2 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
+    rain_day3 = st.slider('Rainfall for Day 3 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
+
+    # Calculate the result using the coefficients and the rainfall inputs
+    df['Result'] = df['Coeff_Day_1']*rain_day1 + df['Coeff_Day_2']*rain_day2 + df['Coeff_Day_3']*rain_day3
+
+    # Set up the map
+    view_state = pdk.ViewState(latitude=45.5017, longitude=-73.5673, zoom=11, bearing=0, pitch=0)
+
+    # Create the heatmap layer
+    heatmap_layer = pdk.Layer(
+        'HeatmapLayer',  # `type` positional argument is here
+        data=df,
+        opacity=0.9,
+        get_position=['Trop-Plein Lon', 'Trop-Plein Lat'],
+        get_weight='Result',
+        threshold=0.5,
+        pickable=True
+    )
+
+    # Render the map
+    r = pdk.Deck(
+        layers=[heatmap_layer],
+        initial_view_state=view_state,
+        map_style='mapbox://styles/mapbox/light-v9'
+    )
+    st.pydeck_chart(r)
+    
+    #st.image("Logo/Pluie-reseau.jpeg",
+             #caption="Prédiction selon les prévisions pluviométriques", use_column_width=True, output_format='JPEG')
 
 
 def engagement():
