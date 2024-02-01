@@ -312,7 +312,7 @@ def prediction():
     )
 
     st.pydeck_chart(r)
-    st.warning('Ces résultats sont préliminaires et sujet à améliorations futures. Ils doivent être interprétés avec prudence et ne doivent pas servir de base pour des décisions définitives. Nous ne sommes pas responsables des dommages résultant de l'utilisation de ces informations. Des mises à jour seront apportées au fur et à mesure de l'avancement du projet.')
+    st.warning("Ces résultats sont préliminaires et sujet à améliorations futures. Ils doivent être interprétés avec prudence et ne doivent pas servir de base pour des décisions définitives. Nous ne sommes pas responsables des dommages résultant de l'utilisation de ces informations. Des mises à jour seront apportées au fur et à mesure de l'avancement du projet.")
 
 
     
