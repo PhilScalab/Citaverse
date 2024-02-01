@@ -285,7 +285,7 @@ def prediction():
     
 
     # Set up the map using Pydeck
-    view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=9, bearing=0, pitch=0)
+    view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.6673, zoom=9, bearing=0, pitch=0)
 
     # Création d'une carte avec pydeck
     heatmap_layer = pydeck.Layer(
