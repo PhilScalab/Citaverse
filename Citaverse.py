@@ -261,8 +261,8 @@ def prediction():
         'Coeff_Day_2': [0.10, -0.611, -0.321, 0.30, 0.30],
         'Coeff_Day_3': [0.10, 0.472, 0.387, 0.40, 0.20],
         'Site No': ['0672-01D', '0672-02D', '0672-03D', '0801-01D', '0801-02D'],
-        'Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
-        'Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
+        'lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
+        'lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
     }
     # Convert to a DataFrame
     df = pd.DataFrame(data)
@@ -281,7 +281,7 @@ def prediction():
                                             row['Coeff_Day_2'] * rain_day2 + 
                                             row['Coeff_Day_3'] * rain_day3, axis=1)
     # Display the results in a table
-    st.write(df)
+    st.write(df['Site No','lat','lon','Resultat'])
     
 
     # Set up the map using Pydeck
@@ -294,8 +294,7 @@ def prediction():
         opacity=0.9,
         get_position=["lon", "lat"],
         get_weight="Resultat",
-        threshold=0.05,
-        radiusPixels=50,
+        threshold=0.5,
         
         #'HeatmapLayer',
         #data=df,
@@ -307,10 +306,6 @@ def prediction():
 
     )
 
-    view_state = pydeck.ViewState(
-        latitude=46.8139, longitude=-71.2082, zoom=6, bearing=0, pitch=45
-    )
-
     r = pydeck.Deck(
         layers=[heatmap_layer],
         initial_view_state=view_state,
@@ -319,9 +314,6 @@ def prediction():
 
     st.pydeck_chart(r)
     
-    # Create the heatmap layer
-    
-    st.pydeck_chart(r)
 
     
     #st.image("Logo/Pluie-reseau.jpeg",
