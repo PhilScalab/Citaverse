@@ -270,17 +270,17 @@ def prediction():
     Ici, nous utiliserons des modèles pour prédire les surverses basées sur les précipitations.
     """)
     # Sliders for precipitation input
-    rain_day1 = st.slider('Rainfall for Day 1 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
-    rain_day2 = st.slider('Rainfall for Day 2 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
-    rain_day3 = st.slider('Rainfall for Day 3 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
+    rain_day1 = st.slider('Pluie Jour 1 (mm)', min_value=0.0, max_value=150.0, value=10.0, step=0.1)
+    rain_day2 = st.slider('Pluie Jour 2 (mm)', min_value=0.0, max_value=150.0, value=10.0, step=0.1)
+    rain_day3 = st.slider('Pluie Jour 3 (mm)', min_value=0.0, max_value=150.0, value=10.0, step=0.1)
 
     # Calculate the results for each location
     df['Result'] = df.apply(lambda row: row['Coeff_Day_1'] * rain_day1 + 
                                             row['Coeff_Day_2'] * rain_day2 + 
-                                            row['Coeff_Day_3'] * rain_day3, axis=1)
+                                            row['Coeff_Day_3'] * rain_day3, axis=1)*100
 
     # Set up the map using Pydeck
-    view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=11, bearing=0, pitch=0)
+    view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=10, bearing=0, pitch=0)
 
     # Create the heatmap layer
     heatmap_layer = pydeck.Layer(
