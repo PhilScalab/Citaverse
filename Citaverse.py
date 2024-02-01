@@ -22,7 +22,7 @@ def accueil():
     st.title("Citaverse: Plateforme d'Engagement Citoyen")
     col1, col2 = st.beta_columns(2)
 
-    htp="https://raw.githubusercontent.com/PhilScalab/Citaverse/blob/main/_12bcb1a9-7d43-417f-9cf4-9a6b5c0ffdee.jpeg"
+    htp="https://raw.githubusercontent.com/PhilScalab/Citaverse/_12bcb1a9-7d43-417f-9cf4-9a6b5c0ffdee.jpeg"
     col1.image(htp, caption= 'Citaverse', width=350)
 
 
