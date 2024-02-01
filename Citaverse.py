@@ -23,7 +23,21 @@ def accueil():
     col1, col2 = st.beta_columns(2)
 
     htp="https://raw.githubusercontent.com/PhilScalab/Citaverse/_12bcb1a9-7d43-417f-9cf4-9a6b5c0ffdee.jpeg"
-    col1.image(htp, caption= 'Citaverse', width=350)
+    #col1.image(htp, caption= 'Citaverse', width=350)
+
+    col1.subheader("Sources de données")
+    col1.warning("""
+    - **Ouvrages de surverse - Débordements d'eaux usées**: 
+        - Type: Données
+        - Taille: 11 Mo
+        - Source: [Partenariat Données Québec](https://www.donneesquebec.ca/recherche/dataset/64372248-d60b-4a2b-a326-bf34c721e568/resource/54190fb7-df03-4a56-b6f3-3059c0b8f1fd/download/ouvrages-de-surverse-debordements-2023-06-20.csv)
+        - Licence: [Attribution (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.fr)
+        - Description des champs : Fournie dans les méta-données
+
+    - **Prévisions météorologiques**:
+        - Source: [Weatherstat basé sur les données d'Environnement et Changement climatique Canada and Climate Canada](https://www.weatherstats.ca/)
+        - Licence: "Environnement et Changement climatique Canada ne garantit pas la qualité, l'exactitude ou l'exhaustivité des informations ou des données. Ces informations et données sont fournies "TELLES QUELLES" sans garantie ni condition de quelque nature que ce soit. L'utilisation de ces données est basée sur le "Limited Use Software and Data Product Licence Agreement" d'Environnement et Changement climatique Canada. Tout usage ultérieur est soumis à cette licence et nécessite une attribution appropriée : basée sur les données d'Environnement et Changement climatique Canada."
+    """)
 
 
    # col1.image("",
@@ -40,19 +54,19 @@ def accueil():
     _Les données fournies par le Partenariat Données Québec sont utilisées conformément à la licence Creative Commons Attribution 4.0 International. Les données météorologiques fournies par Environment and Climate Change Canada sont utilisées conformément au "Limited Use Software and Data Product Licence Agreement". Tout usage, distribution ou modification de ces données doit fournir une attribution appropriée._
     """)
 
-    st.subheader("Sources de données")
-    st.warning("""
-    - **Ouvrages de surverse - Débordements d'eaux usées**: 
-        - Type: Données
-        - Taille: 11 Mo
-        - Source: [Partenariat Données Québec](https://www.donneesquebec.ca/recherche/dataset/64372248-d60b-4a2b-a326-bf34c721e568/resource/54190fb7-df03-4a56-b6f3-3059c0b8f1fd/download/ouvrages-de-surverse-debordements-2023-06-20.csv)
-        - Licence: [Attribution (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.fr)
-        - Description des champs : Fournie dans les méta-données
+    #st.subheader("Sources de données")
+    #st.warning("""
+    #- **Ouvrages de surverse - Débordements d'eaux usées**: 
+        #- Type: Données
+        #- Taille: 11 Mo
+        #- Source: [Partenariat Données Québec](https://www.donneesquebec.ca/recherche/dataset/64372248-d60b-4a2b-a326-bf34c721e568/resource/54190fb7-df03-4a56-b6f3-3059c0b8f1fd/download/ouvrages-de-surverse-debordements-2023-06-20.csv)
+        #- Licence: [Attribution (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.fr)
+        #- Description des champs : Fournie dans les méta-données
 
-    - **Prévisions météorologiques**:
-        - Source: [Weatherstat basé sur les données d'Environnement et Changement climatique Canada and Climate Canada](https://www.weatherstats.ca/)
-        - Licence: "Environnement et Changement climatique Canada ne garantit pas la qualité, l'exactitude ou l'exhaustivité des informations ou des données. Ces informations et données sont fournies "TELLES QUELLES" sans garantie ni condition de quelque nature que ce soit. L'utilisation de ces données est basée sur le "Limited Use Software and Data Product Licence Agreement" d'Environnement et Changement climatique Canada. Tout usage ultérieur est soumis à cette licence et nécessite une attribution appropriée : basée sur les données d'Environnement et Changement climatique Canada."
-    """)
+    #- **Prévisions météorologiques**:
+        #- Source: [Weatherstat basé sur les données d'Environnement et Changement climatique Canada and Climate Canada](https://www.weatherstats.ca/)
+        #- Licence: "Environnement et Changement climatique Canada ne garantit pas la qualité, l'exactitude ou l'exhaustivité des informations ou des données. Ces informations et données sont fournies "TELLES QUELLES" sans garantie ni condition de quelque nature que ce soit. L'utilisation de ces données est basée sur le "Limited Use Software and Data Product Licence Agreement" d'Environnement et Changement climatique Canada. Tout usage ultérieur est soumis à cette licence et nécessite une attribution appropriée : basée sur les données d'Environnement et Changement climatique Canada."
+    #""")
 
 def education():
     st.title("🌊 Comprendre le traitement des eaux usées à Montréal")
