@@ -256,48 +256,50 @@ def prediction():
     # Hardcoded data
     data = {
         'Coeff_Day_1': [0.00, 0.494, 0.807, 0.00, 0.00],
-        'Coeff_Day_2': [0.00, -0.0611, -0.321, 0.00, 0.00],
+        'Coeff_Day_2': [0.00, -0.611, -0.321, 0.00, 0.00],
         'Coeff_Day_3': [0.00, 0.472, 0.387, 0.00, 0.00],
         'Site No': ['0672-01D', '0672-02D', '0672-03D', '0801-01D', '0801-02D'],
         'Trop-Plein Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
         'Trop-Plein Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
     }
+    # Convert to a DataFrame
+    df = pd.DataFrame(data)
     
     
     st.write("""
     Ici, nous utiliserons des modèles pour prédire les surverses basées sur les précipitations.
     """)
-    
-    
     # Sliders for precipitation input
     rain_day1 = st.slider('Rainfall for Day 1 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
     rain_day2 = st.slider('Rainfall for Day 2 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
     rain_day3 = st.slider('Rainfall for Day 3 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
 
-    # Calculate the result using the coefficients and the rainfall inputs
-    data['Result'] = data['Coeff_Day_1']*rain_day1 + data['Coeff_Day_2']*rain_day2 + data['Coeff_Day_3']*rain_day3
+    # Calculate the results for each location
+    df['Result'] = df.apply(lambda row: row['Coeff_Day_1'] * rain_day1 + 
+                                            row['Coeff_Day_2'] * rain_day2 + 
+                                            row['Coeff_Day_3'] * rain_day3, axis=1)
 
-    # Set up the map
+    # Set up the map using Pydeck
     view_state = pdk.ViewState(latitude=45.5017, longitude=-73.5673, zoom=11, bearing=0, pitch=0)
 
     # Create the heatmap layer
     heatmap_layer = pdk.Layer(
-        'HeatmapLayer',  # `type` positional argument is here
-        data=data,
+        'HeatmapLayer',
+        data=df,
         opacity=0.9,
-        get_position=['Trop-Plein Lon', 'Trop-Plein Lat'],
+        get_position='[Trop-Plein Lon, Trop-Plein Lat]',
         get_weight='Result',
         threshold=0.5,
         pickable=True
     )
 
-    # Render the map
+    # Render the map with the heatmap layer
     r = pdk.Deck(
         layers=[heatmap_layer],
-        initial_view_state=view_state,
-        map_style='mapbox://styles/mapbox/light-v9'
+        initial_view_state=view_state
     )
     st.pydeck_chart(r)
+
     
     #st.image("Logo/Pluie-reseau.jpeg",
              #caption="Prédiction selon les prévisions pluviométriques", use_column_width=True, output_format='JPEG')
