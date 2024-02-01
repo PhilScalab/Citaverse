@@ -13,7 +13,9 @@ st.set_page_config(
 
 # Créer un menu latéral avec différentes pages
 menu = ["Accueil", "Éducation","Prédiction des Surverses",
-        "Engagement Citoyen", "Visualisation", "À Propos", "Découvrir"]
+        "Engagement Citoyen", "À Propos"]
+#menu = ["Accueil", "Éducation","Prédiction des Surverses",
+        #"Engagement Citoyen", "Visualisation", "À Propos", "Découvrir"]
 choix = st.sidebar.selectbox("Choisir une page", menu)
 
 # Créer des fonctions pour chaque page
@@ -255,9 +257,9 @@ def prediction():
     st.title("Prédiction des Surverses")
     # Hardcoded data
     data = {
-        'Coeff_Day_1': [0.00, 0.494, 0.807, 0.00, 0.00],
-        'Coeff_Day_2': [0.00, -0.611, -0.321, 0.00, 0.00],
-        'Coeff_Day_3': [0.00, 0.472, 0.387, 0.00, 0.00],
+        'Coeff_Day_1': [0.10, 0.494, 0.807, 0.2, 0.40],
+        'Coeff_Day_2': [0.10, -0.611, -0.321, 0.30, 0.30],
+        'Coeff_Day_3': [0.10, 0.472, 0.387, 0.40, 0.20],
         'Site No': ['0672-01D', '0672-02D', '0672-03D', '0801-01D', '0801-02D'],
         'Trop-Plein Lat': [45.682306, 45.693889, 45.673214, 45.518998, 45.517369],
         'Trop-Plein Lon': [-73.530992, -73.521424, -73.540202, -73.527451, -73.528079]
@@ -275,24 +277,32 @@ def prediction():
     rain_day3 = st.slider('Pluie Jour 3 (mm)', min_value=0.0, max_value=150.0, value=10.0, step=0.1)
 
     # Calculate the results for each location
-    df['Result'] = df.apply(lambda row: row['Coeff_Day_1'] * rain_day1 + 
+    df['Resultat'] = df.apply(lambda row: row['Coeff_Day_1'] * rain_day1 + 
                                             row['Coeff_Day_2'] * rain_day2 + 
                                             row['Coeff_Day_3'] * rain_day3, axis=1)
     # Display the results in a table
-    st.write(df[['Site No', 'Result']])
+    st.write(df[['Site No', 'Resultat']])
 
     # Set up the map using Pydeck
     view_state = pydeck.ViewState(latitude=45.5017, longitude=-73.5673, zoom=9, bearing=0, pitch=0)
 
     # Create the heatmap layer
     heatmap_layer = pydeck.Layer(
-        'HeatmapLayer',
-        data=df,
+        "HeatmapLayer",
+        df,
         opacity=0.9,
-        get_position='[Trop-Plein Lon, Trop-Plein Lat]',
-        get_weight='Result',
-        threshold=0.5,
-        pickable=True
+        get_position=["Trop-Plein lon", "Trop-Plein lat"],
+        get_weight="Resultat",
+        threshold=0.05,
+        radiusPixels=50,
+        
+        #'HeatmapLayer',
+        #data=df,
+        #opacity=0.9,
+        #get_position='[Trop-Plein Lon, Trop-Plein Lat]',
+        #get_weight='Result',
+        #threshold=0.5,
+        #pickable=True
     )
 
     # Render the map with the heatmap layer
@@ -428,9 +438,9 @@ elif choix == "Prédiction des Surverses":
     prediction()
 elif choix == "Engagement Citoyen":
     engagement()
-elif choix == "Visualisation":
-    visualisation()
+#elif choix == "Visualisation":
+    #visualisation()
 elif choix == "À Propos":
     a_propos()
-elif choix == "Découvrir":
-    display_animal_map()
+#elif choix == "Découvrir":
+    #display_animal_map()
