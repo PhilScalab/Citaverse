@@ -274,7 +274,7 @@ def prediction():
     rain_day3 = st.slider('Rainfall for Day 3 (mm)', min_value=0.0, max_value=100.0, value=10.0, step=0.1)
 
     # Calculate the result using the coefficients and the rainfall inputs
-    df['Result'] = df['Coeff_Day_1']*rain_day1 + df['Coeff_Day_2']*rain_day2 + df['Coeff_Day_3']*rain_day3
+    data['Result'] = data['Coeff_Day_1']*rain_day1 + data['Coeff_Day_2']*rain_day2 + data['Coeff_Day_3']*rain_day3
 
     # Set up the map
     view_state = pdk.ViewState(latitude=45.5017, longitude=-73.5673, zoom=11, bearing=0, pitch=0)
@@ -282,7 +282,7 @@ def prediction():
     # Create the heatmap layer
     heatmap_layer = pdk.Layer(
         'HeatmapLayer',  # `type` positional argument is here
-        data=df,
+        data=data,
         opacity=0.9,
         get_position=['Trop-Plein Lon', 'Trop-Plein Lat'],
         get_weight='Result',
