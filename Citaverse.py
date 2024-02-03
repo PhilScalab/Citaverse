@@ -25,7 +25,7 @@ def Reconnaissance():
     Tiohtiake
     """)
     st.info("""
-    Notre équipe aimerait commencer par reconnaître que la ville de Tiohtiake (Montréal) est située sur des terres autochtones non cédées. La nation Kanien'kehá:ka est reconnue comme la gardienne des terres et des eaux sur lesquelles nous nous réunissons aujourd'hui. Tiohtià:ke est historiquement connu comme un lieu de rassemblement pour de nombreuses Premières Nations. Aujourd'hui, elle abrite une population diversifiée d'autochtones et d'autres peuples. 
+    Notre équipe aimerait commencer par reconnaître que la ville de Tiohtiake (Montréal) est située sur des terres autochtones non cédées. La nation Kanien'kehá:ka est reconnue comme la gardienne des terres et des eaux sur lesquelles nous nous réunissons aujourd'hui. Tiohtiakke est historiquement connu comme un lieu de rassemblement pour de nombreuses Premières Nations. Aujourd'hui, elle abrite une population diversifiée d'autochtones et d'autres peuples. 
     Nous respectons les liens continus avec le passé, le présent et l'avenir dans nos relations avec les peuples autochtones et autres au sein de la communauté montréalaise.
     Dans le cadre de ce projet et dans un esprit de réconciliation, notre équipe s'engage à poursuivre notre apprentissage sur l'histoire de la terre sur laquelle nous vivons, où certains d'entre nous ont grandi et où d'autres ont immigré. 
     """)
@@ -40,12 +40,12 @@ def Reconnaissance():
     st.success("""
     Nous saluons et honorons la résilience des peuples autochtones, et nous sommes reconnaissants d'avoir eu la chance d'entendre les histoires des quelques personnes que nous avons rencontrées en travaillant sur ce projet. Nous tenons à remercier le musée Ilnu de Mashteuiatsh, qui nous a accueilli en octobre 2023.
     """)
-    st.title("Reconnaissance Territoriale")
+    st.title("Land Acknowledgment")
     st.subheader("""
     Tiohtiake
     """)
     st.info("""
-    Our team would like to begin by acknowledging that the city of Tiohtiake (Montreal) is located on unceded Indigenous lands. The Kanien’kehá:ka Nation is recognized as the custodians of the lands and waters on which we gather today. Tiohtià:ke/Montréal is historically known as a gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections with the past, present and future in our ongoing relationships with Indigenous and other peoples within the Montreal community.
+    Our team would like to begin by acknowledging that the city of Tiohtiake (Montreal) is located on unceded Indigenous lands. The Kanien’kehá:ka Nation is recognized as the custodians of the lands and waters on which we gather today. Tiohtiake/Montréal is historically known as a gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections with the past, present and future in our ongoing relationships with Indigenous and other peoples within the Montreal community.
 
     In the making of this project and in the spirit of reconciliation, our team is aiming to be committed to continuously learn about the history of the land we live on, that some of us have been raised on and others have immigrated to. Reconciliation is an uncomfortable path, and the impacts of Canada’s colonial history need to be addressed as many consequences still carry on today.
     """)
