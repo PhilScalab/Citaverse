@@ -35,7 +35,7 @@ def Reconnaissance():
     Pour envoyer une lettre à Justin Trudeau, cliquez ici : https://canadians.org/action/first-nations-water/
     """)
     st.subheader("Remerciements")
-    st.snow("""
+    st.success("""
     Nous saluons et honorons la résilience des peuples autochtones, et nous sommes reconnaissants d'avoir eu la chance d'entendre les histoires des quelques personnes que nous avons rencontrées en travaillant sur ce projet. Nous tenons à remercier le musée Ilnu de Mashteuiatsh, qui nous a accueilli en octobre 2023.
     """)
     st.title("Reconnaissance Territoriale")
@@ -54,7 +54,7 @@ def Reconnaissance():
     To send a letter to Justin Trudeau, click here : https://canadians.org/action/first-nations-water/
     """)
     st.subheader("Thank you")
-    st.snow("""
+    st.success("""
     We salute and honor the resilience of Indigenous People, and we feel thankful to have been blessed with hearing the stories of the few who we have met along working on this project. We want to thank the Ilnu museum of Masteuish who welcomed us in October 2023.
     """)
 
