@@ -21,7 +21,9 @@ choix = st.sidebar.selectbox("Choisir une page", menu)
 # Créer des fonctions pour chaque page
 def Reconnaissance():
     st.title("Reconnaissance Territoriale")
-    st.subheader("""Tiohtià:ke""")
+    st.subheader("""
+    Tiohtià:ke
+    """)
     st.info("""
     Notre équipe aimerait commencer par reconnaître que la ville de Tiohtià:ke (Montréal) est située sur des terres autochtones non cédées. La nation Kanien'kehá:ka est reconnue comme la gardienne des terres et des eaux sur lesquelles nous nous réunissons aujourd'hui. Tiohtià:ke est historiquement connu comme un lieu de rassemblement pour de nombreuses Premières Nations. Aujourd'hui, elle abrite une population diversifiée d'autochtones et d'autres peuples. 
     Nous respectons les liens continus avec le passé, le présent et l'avenir dans nos relations avec les peuples autochtones et autres au sein de la communauté montréalaise.
