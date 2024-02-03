@@ -13,13 +13,27 @@ st.set_page_config(
 
 # Créer un menu latéral avec différentes pages
 menu = ["Accueil", "Éducation","Prédiction des Surverses",
-        "Engagement Citoyen", "À Propos"]
+        "Engagement Citoyen", "À Propos","Reconnaissance territoriale"]
 #menu = ["Accueil", "Éducation","Prédiction des Surverses",
         #"Engagement Citoyen", "Visualisation", "À Propos", "Découvrir"]
 choix = st.sidebar.selectbox("Choisir une page", menu)
 
 # Créer des fonctions pour chaque page
+def Reconnaisance():
+    st.title("Reconnaissance territoriale")
+    st.info("""
+    English Land Acknowledgment - 
+    Tiohtià:ke
+    Our team would like to begin by acknowledging that the city of Montreal is located on unceded Indigenous lands. The Kanien’kehá:ka Nation is recognized as the custodians of the lands and waters on which we gather today. Tiohtià:ke/Montréal is historically known as a gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections with the past, present and future in our ongoing relationships with Indigenous and other peoples within the Montreal community.
 
+    In the making of this project and in the spirit of reconciliation, our team is aiming to be committed to continuously learn about the history of the land we live on, that some of us have been raised on and others have immigrated to. Reconciliation is an uncomfortable path, and the impacts of Canada’s colonial history need to be addressed as many consequences still carry on today.
+
+    SAFE WATER FOR FIRST NATIONS
+
+    Water is a precious resource, and we take this opportunity to call for action on the issue of access to safe water to Indigenous communities today in Canada.We invite as many people as possible, including you, to take action and send a letter to Prime Minister Justin Trudeau and tell him it’s time to end drinking water advisories in First Nations. 
+
+    To send a letter to Justin Trudeau, click here : https://canadians.org/action/first-nations-water/
+    """)
 
 def accueil():
     st.title("Citaverse: Plateforme d'Engagement Citoyen")
@@ -441,8 +455,8 @@ elif choix == "Prédiction des Surverses":
     prediction()
 elif choix == "Engagement Citoyen":
     engagement()
-#elif choix == "Visualisation":
-    #visualisation()
+elif choix == "Reconnaissance territoriale":
+    Reconnaissance()
 elif choix == "À Propos":
     a_propos()
 #elif choix == "Découvrir":
