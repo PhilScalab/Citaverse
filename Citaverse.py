@@ -20,16 +20,31 @@ choix = st.sidebar.selectbox("Choisir une page", menu)
 
 # Créer des fonctions pour chaque page
 def Reconnaissance():
-    st.title("Reconnaissance territoriale")
+    st.title("Reconnaissance Territoriale")
+    st.subheader("Tiohtià:ke")
     st.info("""
-    English Land Acknowledgment - 
-    Tiohtià:ke
-    Our team would like to begin by acknowledging that the city of Montreal is located on unceded Indigenous lands. The Kanien’kehá:ka Nation is recognized as the custodians of the lands and waters on which we gather today. Tiohtià:ke/Montréal is historically known as a gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections with the past, present and future in our ongoing relationships with Indigenous and other peoples within the Montreal community.
+    Notre équipe aimerait commencer par reconnaître que la ville de Tiohtià:ke (Montréal) est située sur des terres autochtones non cédées. La nation Kanien'kehá:ka est reconnue comme la gardienne des terres et des eaux sur lesquelles nous nous réunissons aujourd'hui. Tiohtià:ke est historiquement connu comme un lieu de rassemblement pour de nombreuses Premières Nations. Aujourd'hui, elle abrite une population diversifiée d'autochtones et d'autres peuples. 
+    Nous respectons les liens continus avec le passé, le présent et l'avenir dans nos relations avec les peuples autochtones et autres au sein de la communauté montréalaise.
+    Dans le cadre de ce projet et dans un esprit de réconciliation, notre équipe s'engage à poursuivre notre apprentissage sur l'histoire de la terre sur laquelle nous vivons, où certains d'entre nous ont grandi et où d'autres ont immigré. 
+    """)
+    st.subheader("De l'eau potable pour les Premières Nations")
+    st.warning("""
+    La réconciliation est un chemin inconfortable, et les impacts de l'histoire coloniale du Canada doivent être abordés, car de nombreuses conséquences perdurent encore aujourd'hui.
+    Nous invitons le plus grand nombre de personnes possible, y compris vous, à agir et à envoyer un courriel au Premier ministre Justin Trudeau pour lui dire qu'il est temps de mettre fin aux avis sur la qualité de l'eau potable dans les Premières nations. 
+
+    Pour envoyer une lettre à Justin Trudeau, cliquez ici : https://canadians.org/action/first-nations-water/
+    st.subheader("Remerciements")
+    Nous saluons et honorons la résilience des peuples autochtones, et nous sommes reconnaissants d'avoir eu la chance d'entendre les histoires des quelques personnes que nous avons rencontrées en travaillant sur ce projet. Nous tenons à remercier le musée Ilnu de Mashteuiatsh, qui nous a accueilli en octobre 2023.
+    """)
+    st.title("Reconnaissance Territoriale")
+    st.subheader("Tiohtià:ke")
+    st.info("""
+    Our team would like to begin by acknowledging that the city of Tiohtià:ke (Montreal) is located on unceded Indigenous lands. The Kanien’kehá:ka Nation is recognized as the custodians of the lands and waters on which we gather today. Tiohtià:ke/Montréal is historically known as a gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections with the past, present and future in our ongoing relationships with Indigenous and other peoples within the Montreal community.
 
     In the making of this project and in the spirit of reconciliation, our team is aiming to be committed to continuously learn about the history of the land we live on, that some of us have been raised on and others have immigrated to. Reconciliation is an uncomfortable path, and the impacts of Canada’s colonial history need to be addressed as many consequences still carry on today.
-
-    SAFE WATER FOR FIRST NATIONS
-
+    """)
+    st.subheader("Safe water for First Nations")
+    st.warning("""
     Water is a precious resource, and we take this opportunity to call for action on the issue of access to safe water to Indigenous communities today in Canada.We invite as many people as possible, including you, to take action and send a letter to Prime Minister Justin Trudeau and tell him it’s time to end drinking water advisories in First Nations. 
 
     To send a letter to Justin Trudeau, click here : https://canadians.org/action/first-nations-water/
