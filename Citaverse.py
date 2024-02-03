@@ -19,7 +19,7 @@ menu = ["Accueil", "Éducation","Prédiction des Surverses",
 choix = st.sidebar.selectbox("Choisir une page", menu)
 
 # Créer des fonctions pour chaque page
-def Reconnaisance():
+def Reconnaissance():
     st.title("Reconnaissance territoriale")
     st.info("""
     English Land Acknowledgment - 
