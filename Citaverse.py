@@ -21,7 +21,7 @@ choix = st.sidebar.selectbox("Choisir une page", menu)
 # Créer des fonctions pour chaque page
 def Reconnaissance():
     st.title("Reconnaissance Territoriale")
-    st.subheader("Tiohtià:ke")
+    st.subheader("""Tiohtià:ke""")
     st.info("""
     Notre équipe aimerait commencer par reconnaître que la ville de Tiohtià:ke (Montréal) est située sur des terres autochtones non cédées. La nation Kanien'kehá:ka est reconnue comme la gardienne des terres et des eaux sur lesquelles nous nous réunissons aujourd'hui. Tiohtià:ke est historiquement connu comme un lieu de rassemblement pour de nombreuses Premières Nations. Aujourd'hui, elle abrite une population diversifiée d'autochtones et d'autres peuples. 
     Nous respectons les liens continus avec le passé, le présent et l'avenir dans nos relations avec les peuples autochtones et autres au sein de la communauté montréalaise.
@@ -33,11 +33,15 @@ def Reconnaissance():
     Nous invitons le plus grand nombre de personnes possible, y compris vous, à agir et à envoyer un courriel au Premier ministre Justin Trudeau pour lui dire qu'il est temps de mettre fin aux avis sur la qualité de l'eau potable dans les Premières nations. 
 
     Pour envoyer une lettre à Justin Trudeau, cliquez ici : https://canadians.org/action/first-nations-water/
+    """)
     st.subheader("Remerciements")
+    st.snow("""
     Nous saluons et honorons la résilience des peuples autochtones, et nous sommes reconnaissants d'avoir eu la chance d'entendre les histoires des quelques personnes que nous avons rencontrées en travaillant sur ce projet. Nous tenons à remercier le musée Ilnu de Mashteuiatsh, qui nous a accueilli en octobre 2023.
     """)
     st.title("Reconnaissance Territoriale")
-    st.subheader("Tiohtià:ke")
+    st.subheader("""
+    Tiohtià:ke
+    """)
     st.info("""
     Our team would like to begin by acknowledging that the city of Tiohtià:ke (Montreal) is located on unceded Indigenous lands. The Kanien’kehá:ka Nation is recognized as the custodians of the lands and waters on which we gather today. Tiohtià:ke/Montréal is historically known as a gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections with the past, present and future in our ongoing relationships with Indigenous and other peoples within the Montreal community.
 
@@ -48,6 +52,10 @@ def Reconnaissance():
     Water is a precious resource, and we take this opportunity to call for action on the issue of access to safe water to Indigenous communities today in Canada.We invite as many people as possible, including you, to take action and send a letter to Prime Minister Justin Trudeau and tell him it’s time to end drinking water advisories in First Nations. 
 
     To send a letter to Justin Trudeau, click here : https://canadians.org/action/first-nations-water/
+    """)
+    st.subheader("Thank you")
+    st.snow("""
+    We salute and honor the resilience of Indigenous People, and we feel thankful to have been blessed with hearing the stories of the few who we have met along working on this project. We want to thank the Ilnu museum of Masteuish who welcomed us in October 2023.
     """)
 
 def accueil():
